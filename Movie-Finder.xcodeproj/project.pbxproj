@@ -8,23 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		3D3D0AC3218250F500CDD157 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D0AC2218250F500CDD157 /* AppDelegate.swift */; };
-		3D3D0AC5218250F500CDD157 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D0AC4218250F500CDD157 /* ViewController.swift */; };
+		3D3D0AC5218250F500CDD157 /* SearchRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D0AC4218250F500CDD157 /* SearchRequestViewController.swift */; };
 		3D3D0AC8218250F500CDD157 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D3D0AC6218250F500CDD157 /* Main.storyboard */; };
 		3D3D0ACA218250F700CDD157 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D3D0AC9218250F700CDD157 /* Assets.xcassets */; };
 		3D3D0ACD218250F700CDD157 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D3D0ACB218250F700CDD157 /* LaunchScreen.storyboard */; };
 		3D3D0AD8218250F700CDD157 /* Movie_FinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D0AD7218250F700CDD157 /* Movie_FinderTests.swift */; };
 		3D3D0AE3218250F700CDD157 /* Movie_FinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D0AE2218250F700CDD157 /* Movie_FinderUITests.swift */; };
-		3D3D0B6F218253D400CDD157 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3D0B62218253BE00CDD157 /* Alamofire.framework */; };
-		3D3D0B70218253D400CDD157 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3D0B62218253BE00CDD157 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3D3D0B73218253D400CDD157 /* Alamofire iOS Tests.xctest in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = 3D3D0B64218253BE00CDD157 /* Alamofire iOS Tests.xctest */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3D3D0B76218253D400CDD157 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3D0B66218253BE00CDD157 /* Alamofire.framework */; };
-		3D3D0B77218253D400CDD157 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3D0B66218253BE00CDD157 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3D3D0B7A218253D400CDD157 /* Alamofire macOS Tests.xctest in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = 3D3D0B68218253BE00CDD157 /* Alamofire macOS Tests.xctest */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3D3D0B7D218253D400CDD157 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3D0B6E218253BE00CDD157 /* Alamofire.framework */; };
-		3D3D0B7E218253D400CDD157 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3D0B6E218253BE00CDD157 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3D3D0B81218253D400CDD157 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3D0B6A218253BE00CDD157 /* Alamofire.framework */; };
-		3D3D0B82218253D400CDD157 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3D0B6A218253BE00CDD157 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3D3D0B85218253D400CDD157 /* Alamofire tvOS Tests.xctest in Embed PlugIns */ = {isa = PBXBuildFile; fileRef = 3D3D0B6C218253BE00CDD157 /* Alamofire tvOS Tests.xctest */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3D3D0B882182554900CDD157 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3D0B62218253BE00CDD157 /* Alamofire.framework */; };
+		3D3D0B892182554900CDD157 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3D3D0B62218253BE00CDD157 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3D3D0B8E218255AC00CDD157 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D0B8D218255AC00CDD157 /* SearchResultsViewController.swift */; };
+		3D3D0B9121825D2900CDD157 /* MovieCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D0B9021825D2900CDD157 /* MovieCelda.swift */; };
+		3D3D0B942182643500CDD157 /* DatosSearchRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D0B932182643500CDD157 /* DatosSearchRequestView.swift */; };
+		3D3D0B9D2182644900CDD157 /* DatosSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D0B9C2182644900CDD157 /* DatosSearchResults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,83 +86,25 @@
 			remoteGlobalIDString = E4202FE01B667AA100C997FB;
 			remoteInfo = "Alamofire watchOS";
 		};
-		3D3D0B71218253D400CDD157 /* PBXContainerItemProxy */ = {
+		3D3D0B8A2182554900CDD157 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3D3D0B56218253BD00CDD157 /* Alamofire.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
 			remoteInfo = "Alamofire iOS";
 		};
-		3D3D0B74218253D400CDD157 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3D3D0B56218253BD00CDD157 /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3D19A95C8B0040E7D1;
-			remoteInfo = "Alamofire iOS Tests";
-		};
-		3D3D0B78218253D400CDD157 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3D3D0B56218253BD00CDD157 /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 4DD67C0A1A5C55C900ED2280;
-			remoteInfo = "Alamofire macOS";
-		};
-		3D3D0B7B218253D400CDD157 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3D3D0B56218253BD00CDD157 /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F829C6B11A7A94F100A2CD59;
-			remoteInfo = "Alamofire macOS Tests";
-		};
-		3D3D0B7F218253D400CDD157 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3D3D0B56218253BD00CDD157 /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = E4202FCD1B667AA100C997FB;
-			remoteInfo = "Alamofire watchOS";
-		};
-		3D3D0B83218253D400CDD157 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3D3D0B56218253BD00CDD157 /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 4CF626EE1BA7CB3E0011A099;
-			remoteInfo = "Alamofire tvOS";
-		};
-		3D3D0B86218253D400CDD157 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3D3D0B56218253BD00CDD157 /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 4CF626F71BA7CB3E0011A099;
-			remoteInfo = "Alamofire tvOS Tests";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		3D3D0B542182525E00CDD157 /* Embed Frameworks */ = {
+		3D3D0B8C2182554900CDD157 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3D3D0B70218253D400CDD157 /* Alamofire.framework in Embed Frameworks */,
-				3D3D0B7E218253D400CDD157 /* Alamofire.framework in Embed Frameworks */,
-				3D3D0B77218253D400CDD157 /* Alamofire.framework in Embed Frameworks */,
-				3D3D0B82218253D400CDD157 /* Alamofire.framework in Embed Frameworks */,
+				3D3D0B892182554900CDD157 /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3D3D0B552182525E00CDD157 /* Embed PlugIns */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				3D3D0B85218253D400CDD157 /* Alamofire tvOS Tests.xctest in Embed PlugIns */,
-				3D3D0B73218253D400CDD157 /* Alamofire iOS Tests.xctest in Embed PlugIns */,
-				3D3D0B7A218253D400CDD157 /* Alamofire macOS Tests.xctest in Embed PlugIns */,
-			);
-			name = "Embed PlugIns";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -175,7 +112,7 @@
 /* Begin PBXFileReference section */
 		3D3D0ABF218250F500CDD157 /* Movie-Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie-Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D3D0AC2218250F500CDD157 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3D3D0AC4218250F500CDD157 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3D3D0AC4218250F500CDD157 /* SearchRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRequestViewController.swift; sourceTree = "<group>"; };
 		3D3D0AC7218250F500CDD157 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3D3D0AC9218250F700CDD157 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3D3D0ACC218250F700CDD157 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -187,6 +124,10 @@
 		3D3D0AE2218250F700CDD157 /* Movie_FinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie_FinderUITests.swift; sourceTree = "<group>"; };
 		3D3D0AE4218250F700CDD157 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D3D0B56218253BD00CDD157 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		3D3D0B8D218255AC00CDD157 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		3D3D0B9021825D2900CDD157 /* MovieCelda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCelda.swift; sourceTree = "<group>"; };
+		3D3D0B932182643500CDD157 /* DatosSearchRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosSearchRequestView.swift; sourceTree = "<group>"; };
+		3D3D0B9C2182644900CDD157 /* DatosSearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosSearchResults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,10 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D3D0B6F218253D400CDD157 /* Alamofire.framework in Frameworks */,
-				3D3D0B7D218253D400CDD157 /* Alamofire.framework in Frameworks */,
-				3D3D0B76218253D400CDD157 /* Alamofire.framework in Frameworks */,
-				3D3D0B81218253D400CDD157 /* Alamofire.framework in Frameworks */,
+				3D3D0B882182554900CDD157 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,8 +180,8 @@
 		3D3D0AC1218250F500CDD157 /* Movie-Finder */ = {
 			isa = PBXGroup;
 			children = (
+				3D3D0B8F218255C700CDD157 /* ViewControllers */,
 				3D3D0AC2218250F500CDD157 /* AppDelegate.swift */,
-				3D3D0AC4218250F500CDD157 /* ViewController.swift */,
 				3D3D0AC6218250F500CDD157 /* Main.storyboard */,
 				3D3D0AC9218250F700CDD157 /* Assets.xcassets */,
 				3D3D0ACB218250F700CDD157 /* LaunchScreen.storyboard */,
@@ -284,6 +222,26 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		3D3D0B8F218255C700CDD157 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3D3D0B9E2182644D00CDD157 /* Models */,
+				3D3D0B8D218255AC00CDD157 /* SearchResultsViewController.swift */,
+				3D3D0AC4218250F500CDD157 /* SearchRequestViewController.swift */,
+				3D3D0B9021825D2900CDD157 /* MovieCelda.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3D3D0B9E2182644D00CDD157 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D3D0B932182643500CDD157 /* DatosSearchRequestView.swift */,
+				3D3D0B9C2182644900CDD157 /* DatosSearchResults.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -294,19 +252,12 @@
 				3D3D0ABB218250F500CDD157 /* Sources */,
 				3D3D0ABC218250F500CDD157 /* Frameworks */,
 				3D3D0ABD218250F500CDD157 /* Resources */,
-				3D3D0B542182525E00CDD157 /* Embed Frameworks */,
-				3D3D0B552182525E00CDD157 /* Embed PlugIns */,
+				3D3D0B8C2182554900CDD157 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3D3D0B72218253D400CDD157 /* PBXTargetDependency */,
-				3D3D0B75218253D400CDD157 /* PBXTargetDependency */,
-				3D3D0B79218253D400CDD157 /* PBXTargetDependency */,
-				3D3D0B7C218253D400CDD157 /* PBXTargetDependency */,
-				3D3D0B80218253D400CDD157 /* PBXTargetDependency */,
-				3D3D0B84218253D400CDD157 /* PBXTargetDependency */,
-				3D3D0B87218253D400CDD157 /* PBXTargetDependency */,
+				3D3D0B8B2182554900CDD157 /* PBXTargetDependency */,
 			);
 			name = "Movie-Finder";
 			productName = "Movie-Finder";
@@ -482,7 +433,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D3D0AC5218250F500CDD157 /* ViewController.swift in Sources */,
+				3D3D0B9D2182644900CDD157 /* DatosSearchResults.swift in Sources */,
+				3D3D0B9121825D2900CDD157 /* MovieCelda.swift in Sources */,
+				3D3D0AC5218250F500CDD157 /* SearchRequestViewController.swift in Sources */,
+				3D3D0B8E218255AC00CDD157 /* SearchResultsViewController.swift in Sources */,
+				3D3D0B942182643500CDD157 /* DatosSearchRequestView.swift in Sources */,
 				3D3D0AC3218250F500CDD157 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,40 +471,10 @@
 			target = 3D3D0ABE218250F500CDD157 /* Movie-Finder */;
 			targetProxy = 3D3D0ADF218250F700CDD157 /* PBXContainerItemProxy */;
 		};
-		3D3D0B72218253D400CDD157 /* PBXTargetDependency */ = {
+		3D3D0B8B2182554900CDD157 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Alamofire iOS";
-			targetProxy = 3D3D0B71218253D400CDD157 /* PBXContainerItemProxy */;
-		};
-		3D3D0B75218253D400CDD157 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire iOS Tests";
-			targetProxy = 3D3D0B74218253D400CDD157 /* PBXContainerItemProxy */;
-		};
-		3D3D0B79218253D400CDD157 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire macOS";
-			targetProxy = 3D3D0B78218253D400CDD157 /* PBXContainerItemProxy */;
-		};
-		3D3D0B7C218253D400CDD157 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire macOS Tests";
-			targetProxy = 3D3D0B7B218253D400CDD157 /* PBXContainerItemProxy */;
-		};
-		3D3D0B80218253D400CDD157 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire watchOS";
-			targetProxy = 3D3D0B7F218253D400CDD157 /* PBXContainerItemProxy */;
-		};
-		3D3D0B84218253D400CDD157 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire tvOS";
-			targetProxy = 3D3D0B83218253D400CDD157 /* PBXContainerItemProxy */;
-		};
-		3D3D0B87218253D400CDD157 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Alamofire tvOS Tests";
-			targetProxy = 3D3D0B86218253D400CDD157 /* PBXContainerItemProxy */;
+			targetProxy = 3D3D0B8A2182554900CDD157 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

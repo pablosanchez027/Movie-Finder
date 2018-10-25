@@ -6,23 +6,181 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Search Request View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Movie_Finder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SearchRequestViewController" customModule="Movie_Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Finder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jp3-hs-c4s">
+                                <rect key="frame" x="62" y="20" width="251.5" height="57.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Escribe una palabra clave" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yxF-rd-vbX">
+                                <rect key="frame" x="16" y="117" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textSearch:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="bn4-De-dwo"/>
+                                </connections>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HMo-r3-myc">
+                                <rect key="frame" x="0.0" y="155" width="359" height="512"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="60" id="76I-Ps-tLq" customClass="MovieCelda" customModule="Movie_Finder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="359" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="76I-Ps-tLq" id="F13-Da-mEU">
+                                            <rect key="frame" x="0.0" y="0.0" width="326" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrB-M1-R6r">
+                                                    <rect key="frame" x="15" y="19" width="57" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Año" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuG-9g-o00">
+                                                    <rect key="frame" x="289" y="19" width="29" height="21"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DuG-9g-o00" firstAttribute="centerY" secondItem="F13-Da-mEU" secondAttribute="centerY" id="PyR-1W-A14"/>
+                                                <constraint firstItem="nrB-M1-R6r" firstAttribute="leading" secondItem="F13-Da-mEU" secondAttribute="leadingMargin" id="Wy1-MS-jo7"/>
+                                                <constraint firstItem="DuG-9g-o00" firstAttribute="trailing" secondItem="F13-Da-mEU" secondAttribute="trailingMargin" id="YAA-4E-6kL"/>
+                                                <constraint firstItem="nrB-M1-R6r" firstAttribute="centerY" secondItem="F13-Da-mEU" secondAttribute="centerY" id="mos-LF-mSC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lblAño" destination="DuG-9g-o00" id="cJm-om-FWY"/>
+                                            <outlet property="lblNombre" destination="nrB-M1-R6r" id="QfK-Ca-C6E"/>
+                                            <segue destination="c3Z-og-eMo" kind="show" id="koP-jd-ecy"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Búsqueda:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sW7-LX-rBQ">
+                                <rect key="frame" x="16" y="85" width="77.5" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="sW7-LX-rBQ" firstAttribute="top" secondItem="jp3-hs-c4s" secondAttribute="bottom" constant="7.5" id="0Mn-8P-A41"/>
+                            <constraint firstItem="sW7-LX-rBQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="EIa-0u-Fkq"/>
+                            <constraint firstItem="jp3-hs-c4s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GSd-rt-ARG"/>
+                            <constraint firstItem="HMo-r3-myc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MgZ-Fs-qfk"/>
+                            <constraint firstItem="HMo-r3-myc" firstAttribute="top" secondItem="yxF-rd-vbX" secondAttribute="bottom" constant="8" id="YCD-2b-jdi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yxF-rd-vbX" secondAttribute="trailing" constant="16" id="bO2-cz-Mll"/>
+                            <constraint firstItem="HMo-r3-myc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cAR-Az-kBD"/>
+                            <constraint firstItem="yxF-rd-vbX" firstAttribute="top" secondItem="sW7-LX-rBQ" secondAttribute="bottom" constant="11" id="fZl-pP-bT2"/>
+                            <constraint firstItem="yxF-rd-vbX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kh0-rr-ycM"/>
+                            <constraint firstItem="jp3-hs-c4s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pji-J0-vGE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HMo-r3-myc" secondAttribute="trailing" constant="16" id="ryu-pY-q9I"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="tbMovies" destination="HMo-r3-myc" id="4C6-Pa-hH0"/>
+                        <outlet property="txtSearch" destination="yxF-rd-vbX" id="QNB-4F-4GO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zAf-x0-CIS">
+            <objects>
+                <viewController id="c3Z-og-eMo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KjY-cY-mXc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBd-yE-c8T">
+                                <rect key="frame" x="85.5" y="20" width="205" height="57.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Año" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QZ9-Ce-TJv">
+                                <rect key="frame" x="16" y="85" width="28.5" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDC-cW-lf0">
+                                <rect key="frame" x="16" y="114" width="54.5" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duración" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNo-he-7Xw">
+                                <rect key="frame" x="16" y="143" width="63" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9I8-VT-q7X">
+                                <rect key="frame" x="16" y="172" width="44.5" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Género" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHE-Bz-Mze">
+                                <rect key="frame" x="16" y="201" width="53" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pW7-hn-CRx">
+                                <rect key="frame" x="135" y="576" width="106" height="71"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="SZB-BX-5gi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fHE-Bz-Mze" firstAttribute="top" secondItem="9I8-VT-q7X" secondAttribute="bottom" constant="8" id="2k2-qz-9ye"/>
+                            <constraint firstItem="PBd-yE-c8T" firstAttribute="centerX" secondItem="KjY-cY-mXc" secondAttribute="centerX" id="7J0-yq-mJS"/>
+                            <constraint firstItem="xzz-If-mKa" firstAttribute="bottom" secondItem="pW7-hn-CRx" secondAttribute="bottom" constant="20" id="894-a7-9gY"/>
+                            <constraint firstItem="PNo-he-7Xw" firstAttribute="top" secondItem="GDC-cW-lf0" secondAttribute="bottom" constant="8" id="BPc-wE-y1y"/>
+                            <constraint firstItem="pW7-hn-CRx" firstAttribute="centerX" secondItem="KjY-cY-mXc" secondAttribute="centerX" id="DaY-rk-ejQ"/>
+                            <constraint firstItem="9I8-VT-q7X" firstAttribute="leading" secondItem="xzz-If-mKa" secondAttribute="leading" constant="16" id="Flu-cQ-L7Z"/>
+                            <constraint firstItem="QZ9-Ce-TJv" firstAttribute="top" secondItem="PBd-yE-c8T" secondAttribute="bottom" constant="7.5" id="IBF-tL-W99"/>
+                            <constraint firstItem="PBd-yE-c8T" firstAttribute="top" secondItem="xzz-If-mKa" secondAttribute="top" id="NeS-Jb-lE8"/>
+                            <constraint firstItem="fHE-Bz-Mze" firstAttribute="leading" secondItem="xzz-If-mKa" secondAttribute="leading" constant="16" id="OqT-uM-AdM"/>
+                            <constraint firstItem="9I8-VT-q7X" firstAttribute="top" secondItem="PNo-he-7Xw" secondAttribute="bottom" constant="8" id="PyN-BZ-53H"/>
+                            <constraint firstItem="QZ9-Ce-TJv" firstAttribute="leading" secondItem="xzz-If-mKa" secondAttribute="leading" constant="16" id="S3H-Va-YTu"/>
+                            <constraint firstItem="GDC-cW-lf0" firstAttribute="top" secondItem="QZ9-Ce-TJv" secondAttribute="bottom" constant="8" id="aaT-ma-kc7"/>
+                            <constraint firstItem="PNo-he-7Xw" firstAttribute="leading" secondItem="xzz-If-mKa" secondAttribute="leading" constant="16" id="hsu-3L-f6N"/>
+                            <constraint firstItem="GDC-cW-lf0" firstAttribute="leading" secondItem="xzz-If-mKa" secondAttribute="leading" constant="16" id="mG0-C7-bY4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xzz-If-mKa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ibs-rZ-QkP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="936.79999999999995" y="117.39130434782609"/>
         </scene>
     </scenes>
 </document>
