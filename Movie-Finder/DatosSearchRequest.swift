@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import Alamofire
 
-class DatosSearchRequestView {
+class DatosSearchRequest {
     var movieNombre: String
     var movieAño: Int
     var movieimdbID: String

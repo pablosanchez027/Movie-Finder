@@ -10,5 +10,5 @@ import Foundation
 import UIKit
 
 class DatosMovie {
-    static var moviesSearch : [DatosSearchRequestView] = []
+    static var moviesSearch : [DatosSearchRequest] = []
 }

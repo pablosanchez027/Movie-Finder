@@ -31,7 +31,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="textSearch:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="bn4-De-dwo"/>
+                                    <action selector="Search:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Ly9-De-61v"/>
                                 </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HMo-r3-myc">
@@ -46,13 +46,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrB-M1-R6r">
-                                                    <rect key="frame" x="15" y="19" width="57" height="21"/>
+                                                    <rect key="frame" x="15" y="19.5" width="57" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Año" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuG-9g-o00">
-                                                    <rect key="frame" x="289" y="19" width="29" height="21"/>
+                                                    <rect key="frame" x="289" y="19.5" width="29" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -72,6 +72,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="pa1-v6-0kJ"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="d3M-Vh-8KH"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Búsqueda:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sW7-LX-rBQ">
                                 <rect key="frame" x="16" y="85" width="77.5" height="21"/>
@@ -79,13 +83,27 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Pc5-45-2aQ">
+                                <rect key="frame" x="339" y="86" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yrf-KM-ZzJ">
+                                <rect key="frame" x="279" y="79" width="52" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Buscar"/>
+                                <connections>
+                                    <action selector="tapBuscar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FEB-Td-Blc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="sW7-LX-rBQ" firstAttribute="top" secondItem="jp3-hs-c4s" secondAttribute="bottom" constant="7.5" id="0Mn-8P-A41"/>
                             <constraint firstItem="sW7-LX-rBQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="EIa-0u-Fkq"/>
                             <constraint firstItem="jp3-hs-c4s" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GSd-rt-ARG"/>
+                            <constraint firstItem="Pc5-45-2aQ" firstAttribute="leading" secondItem="Yrf-KM-ZzJ" secondAttribute="trailing" constant="8" id="ITP-yE-9Hy"/>
                             <constraint firstItem="HMo-r3-myc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MgZ-Fs-qfk"/>
+                            <constraint firstItem="yxF-rd-vbX" firstAttribute="top" secondItem="Pc5-45-2aQ" secondAttribute="bottom" constant="11" id="Q62-cC-Ljz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pc5-45-2aQ" secondAttribute="trailing" constant="16" id="Qu5-KR-IS5"/>
                             <constraint firstItem="HMo-r3-myc" firstAttribute="top" secondItem="yxF-rd-vbX" secondAttribute="bottom" constant="8" id="YCD-2b-jdi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yxF-rd-vbX" secondAttribute="trailing" constant="16" id="bO2-cz-Mll"/>
                             <constraint firstItem="HMo-r3-myc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="cAR-Az-kBD"/>
@@ -93,10 +111,12 @@
                             <constraint firstItem="yxF-rd-vbX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kh0-rr-ycM"/>
                             <constraint firstItem="jp3-hs-c4s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pji-J0-vGE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HMo-r3-myc" secondAttribute="trailing" constant="16" id="ryu-pY-q9I"/>
+                            <constraint firstItem="yxF-rd-vbX" firstAttribute="top" secondItem="Yrf-KM-ZzJ" secondAttribute="bottom" constant="5" id="uSz-Iv-bIn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="aiSearch" destination="Pc5-45-2aQ" id="g0h-r4-hsE"/>
                         <outlet property="tbMovies" destination="HMo-r3-myc" id="4C6-Pa-hH0"/>
                         <outlet property="txtSearch" destination="yxF-rd-vbX" id="QNB-4F-4GO"/>
                     </connections>
