@@ -11,7 +11,7 @@ import Alamofire
 
 class SearchRequestViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var urlAPI : String = "http://www.omdbapi.com/?apikey=5aec3ba9&s="
+    var urlAPI : String = "https://www.omdbapi.com/?apikey=5aec3ba9&s="
     var movieURL: String = ""
     
     
