@@ -24,13 +24,13 @@ class SearchRequestViewController: UIViewController, UITableViewDataSource, UITa
                     for indiceSearch in arregloSearch {
                         let elementoSearch = indiceSearch as? NSDictionary {
                             if let movieNombre = elementoSearch?.value(forKey: "Title") as? String {
-                                DatosMovies.moviesSearch.append(movieNombre: movieNombre)
+                                DatosMovie.moviesSearch.append(movieNombre: movieNombre)
                             }
                             if let movieAño = elementoSearch?.value(forKey: "Year") as? Int {
-                                DatosMovies.moviesSearch.append(movieAño: movieAño)
+                                DatosMovie.moviesSearch.append(movieAño: movieAño)
                             }
                             if let movieIMDBID = elementoSearch?.value(forKey: "imdbID") as? String {
-                                DatosMovies.moviesSearch.append(movieIMDBID: movieIMDBID)
+                                DatosMovie.moviesSearch.append(movieIMDBID: movieIMDBID)
                             }
                         }
                     }
@@ -47,7 +47,7 @@ class SearchRequestViewController: UIViewController, UITableViewDataSource, UITa
     @IBOutlet weak var tbMovies: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        DatosMovies.moviesSearch.count
+        DatosMovie.moviesSearch.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
