@@ -11,5 +11,19 @@ import UIKit
 import Alamofire
 
 class DatosSearchRequestView {
-    var urlAPI : String = "http://www.omdbapi.com/?apikey=5aec3ba9&s="
+    var movieNombre: String
+    var movieAño: Int
+    var movieimdbID: String
+    
+    init() {
+        movieNombre = ""
+        movieAño = 0
+        movieimdbID = ""
+    }
+    
+    init(movieNombre : String, movieAño: Int, movieimdbID: String) {
+        self.movieNombre = movieNombre
+        self.movieAño = movieAño
+        self.movieimdbID = movieimdbID
+    }
 }

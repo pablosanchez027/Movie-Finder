@@ -11,7 +11,7 @@ import Alamofire
 
 class SearchRequestViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var movieName : String = ""
+    var urlAPI : String = "http://www.omdbapi.com/?apikey=5aec3ba9&s="
     
     @IBOutlet weak var txtSearch: UITextField!
     
@@ -19,7 +19,23 @@ class SearchRequestViewController: UIViewController, UITableViewDataSource, UITa
         Alamofire.request(urlAPI).responseJSON {
             response in
             if let diccionarioRespuesta = response.result.value as? NSDictionary {
-                
+                if let arregloSearch = diccionarioRespuesta.value(forKey: "Search") as? NSArray {
+                    
+                    for indiceSearch in arregloSearch {
+                        let elementoSearch = indiceSearch as? NSDictionary {
+                            if let movieNombre = elementoSearch?.value(forKey: "Title") as? String {
+                                DatosMovies.moviesSearch.append(movieNombre: movieNombre)
+                            }
+                            if let movieAño = elementoSearch?.value(forKey: "Year") as? Int {
+                                DatosMovies.moviesSearch.append(movieAño: movieAño)
+                            }
+                            if let movieIMDBID = elementoSearch?.value(forKey: "imdbID") as? String {
+                                DatosMovies.moviesSearch.append(movieIMDBID: movieIMDBID)
+                            }
+                        }
+                    }
+                    
+                }
             }
         }
             
@@ -31,11 +47,13 @@ class SearchRequestViewController: UIViewController, UITableViewDataSource, UITa
     @IBOutlet weak var tbMovies: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        DatosMovies.moviesSearch.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let celda = tableView.dequeueReusableCell(withIdentifier: "cellMovie") as! MovieCelda
+        celda.lblNombre.text = DatosMovies.moviesSearch[indexPath.row].movieNombre
+        celda.lblAño.text = "\(DatosMovies.moviesSearch[indexPath.row].movieAño)"
     }
     
     

@@ -20,6 +20,7 @@
 		3D3D0B9121825D2900CDD157 /* MovieCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D0B9021825D2900CDD157 /* MovieCelda.swift */; };
 		3D3D0B942182643500CDD157 /* DatosSearchRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D0B932182643500CDD157 /* DatosSearchRequestView.swift */; };
 		3D3D0B9D2182644900CDD157 /* DatosSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D0B9C2182644900CDD157 /* DatosSearchResults.swift */; };
+		3DE71812218937BF00053894 /* DatosMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE71811218937BF00053894 /* DatosMovie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		3D3D0B9021825D2900CDD157 /* MovieCelda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCelda.swift; sourceTree = "<group>"; };
 		3D3D0B932182643500CDD157 /* DatosSearchRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosSearchRequestView.swift; sourceTree = "<group>"; };
 		3D3D0B9C2182644900CDD157 /* DatosSearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosSearchResults.swift; sourceTree = "<group>"; };
+		3DE71811218937BF00053894 /* DatosMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosMovie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 				3D3D0B8D218255AC00CDD157 /* SearchResultsViewController.swift */,
 				3D3D0AC4218250F500CDD157 /* SearchRequestViewController.swift */,
 				3D3D0B9021825D2900CDD157 /* MovieCelda.swift */,
+				3DE71811218937BF00053894 /* DatosMovie.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				3D3D0B8E218255AC00CDD157 /* SearchResultsViewController.swift in Sources */,
 				3D3D0B942182643500CDD157 /* DatosSearchRequestView.swift in Sources */,
 				3D3D0AC3218250F500CDD157 /* AppDelegate.swift in Sources */,
+				3DE71812218937BF00053894 /* DatosMovie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
