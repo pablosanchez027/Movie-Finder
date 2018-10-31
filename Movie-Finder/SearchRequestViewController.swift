@@ -57,7 +57,7 @@ class SearchRequestViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return 90
     }
     
     
@@ -86,6 +86,14 @@ class SearchRequestViewController: UIViewController, UITableViewDataSource, UITa
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToDetalle" {
+            let destino = segue.destination as? SearchResultsViewController
+            
+            destino?.movie = DatosMovie.moviesSearch[(tbMovies.indexPathForSelectedRow?.row)!]
+        }
+    }
+    
+    
 }
 

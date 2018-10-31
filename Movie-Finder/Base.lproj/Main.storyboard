@@ -38,31 +38,31 @@
                                 <rect key="frame" x="0.0" y="155" width="359" height="512"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellMovie" rowHeight="60" id="76I-Ps-tLq" customClass="MovieCelda" customModule="Movie_Finder" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="359" height="60"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellMovie" rowHeight="90" id="76I-Ps-tLq" customClass="MovieCelda" customModule="Movie_Finder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="359" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="76I-Ps-tLq" id="F13-Da-mEU">
-                                            <rect key="frame" x="0.0" y="0.0" width="326" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="326" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrB-M1-R6r">
-                                                    <rect key="frame" x="15" y="19.5" width="57" height="21"/>
+                                                    <rect key="frame" x="15" y="11" width="57" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Año" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuG-9g-o00">
-                                                    <rect key="frame" x="289" y="19.5" width="29" height="21"/>
+                                                    <rect key="frame" x="289" y="58" width="29" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="DuG-9g-o00" firstAttribute="centerY" secondItem="F13-Da-mEU" secondAttribute="centerY" id="PyR-1W-A14"/>
+                                                <constraint firstItem="DuG-9g-o00" firstAttribute="centerY" secondItem="F13-Da-mEU" secondAttribute="centerY" constant="23.75" id="PyR-1W-A14"/>
                                                 <constraint firstItem="nrB-M1-R6r" firstAttribute="leading" secondItem="F13-Da-mEU" secondAttribute="leadingMargin" id="Wy1-MS-jo7"/>
                                                 <constraint firstItem="DuG-9g-o00" firstAttribute="trailing" secondItem="F13-Da-mEU" secondAttribute="trailingMargin" id="YAA-4E-6kL"/>
-                                                <constraint firstItem="nrB-M1-R6r" firstAttribute="centerY" secondItem="F13-Da-mEU" secondAttribute="centerY" id="mos-LF-mSC"/>
+                                                <constraint firstItem="nrB-M1-R6r" firstAttribute="centerY" secondItem="F13-Da-mEU" secondAttribute="centerY" constant="-23.25" id="mos-LF-mSC"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -125,10 +125,10 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
         </scene>
-        <!--View Controller-->
+        <!--Search Results View Controller-->
         <scene sceneID="zAf-x0-CIS">
             <objects>
-                <viewController id="c3Z-og-eMo" sceneMemberID="viewController">
+                <viewController id="c3Z-og-eMo" customClass="SearchResultsViewController" customModule="Movie_Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KjY-cY-mXc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,7 +174,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="SZB-BX-5gi"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="VOG-cv-rzq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -197,6 +197,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xzz-If-mKa"/>
                     </view>
+                    <connections>
+                        <outlet property="lblAño" destination="QZ9-Ce-TJv" id="HOo-eU-hM2"/>
+                        <outlet property="lblDirector" destination="GDC-cW-lf0" id="TEO-E4-iUa"/>
+                        <outlet property="lblDuracion" destination="PNo-he-7Xw" id="nOh-rt-dz1"/>
+                        <outlet property="lblGenero" destination="fHE-Bz-Mze" id="LJe-Dq-ntE"/>
+                        <outlet property="lblRating" destination="9I8-VT-q7X" id="zfg-v3-dnR"/>
+                        <outlet property="lblTitle" destination="QZ9-Ce-TJv" id="wNu-5M-R5p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ibs-rZ-QkP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
