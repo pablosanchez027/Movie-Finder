@@ -12,16 +12,16 @@ import Alamofire
 
 class DatosSearchRequest {
     var movieNombre: String
-    var movieAño: Int
+    var movieAño: String
     var movieimdbID: String
     
     init() {
         movieNombre = ""
-        movieAño = 0
+        movieAño = ""
         movieimdbID = ""
     }
     
-    init(movieNombre : String, movieAño: Int, movieimdbID: String) {
+    init(movieNombre : String, movieAño: String, movieimdbID: String) {
         self.movieNombre = movieNombre
         self.movieAño = movieAño
         self.movieimdbID = movieimdbID

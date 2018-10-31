@@ -35,13 +35,13 @@ class SearchRequestViewController: UIViewController, UITableViewDataSource, UITa
                     
                     for indiceSearch in arregloSearch {
                         if let elementoSearch = indiceSearch as? NSDictionary {
-                            let movieNombre = elementoSearch.value(forKey: "Title") as? String
+                            let Nombre = elementoSearch.value(forKey: "Title") as? String
                             
-                            let movieAño = elementoSearch.value(forKey: "Year") as? Int
+                            let Año = elementoSearch.value(forKey: "Year") as? String
                             
-                            let movieIMDBID = elementoSearch.value(forKey: "imdbID") as? String
+                            let IMDBID = elementoSearch.value(forKey: "imdbID") as? String
                             
-                            movie = DatosSearchRequest(movieNombre: movieNombre!, movieAño: movieAño!, movieimdbID: movieIMDBID!)
+                            movie = DatosSearchRequest(movieNombre: Nombre!, movieAño: Año!, movieimdbID: IMDBID!)
                             
                             DatosMovie.moviesSearch.append(movie)
                             
