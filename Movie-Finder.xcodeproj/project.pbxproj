@@ -19,7 +19,6 @@
 		3D3D0B8E218255AC00CDD157 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D0B8D218255AC00CDD157 /* SearchResultsViewController.swift */; };
 		3D3D0B9121825D2900CDD157 /* MovieCelda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D0B9021825D2900CDD157 /* MovieCelda.swift */; };
 		3D3D0B942182643500CDD157 /* DatosSearchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D0B932182643500CDD157 /* DatosSearchRequest.swift */; };
-		3D3D0B9D2182644900CDD157 /* DatosSearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3D0B9C2182644900CDD157 /* DatosSearchResults.swift */; };
 		3DE71812218937BF00053894 /* DatosMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DE71811218937BF00053894 /* DatosMovie.swift */; };
 /* End PBXBuildFile section */
 
@@ -128,7 +127,6 @@
 		3D3D0B8D218255AC00CDD157 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		3D3D0B9021825D2900CDD157 /* MovieCelda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCelda.swift; sourceTree = "<group>"; };
 		3D3D0B932182643500CDD157 /* DatosSearchRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosSearchRequest.swift; sourceTree = "<group>"; };
-		3D3D0B9C2182644900CDD157 /* DatosSearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosSearchResults.swift; sourceTree = "<group>"; };
 		3DE71811218937BF00053894 /* DatosMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosMovie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -240,7 +238,6 @@
 			isa = PBXGroup;
 			children = (
 				3D3D0B932182643500CDD157 /* DatosSearchRequest.swift */,
-				3D3D0B9C2182644900CDD157 /* DatosSearchResults.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -436,7 +433,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D3D0B9D2182644900CDD157 /* DatosSearchResults.swift in Sources */,
 				3D3D0B9121825D2900CDD157 /* MovieCelda.swift in Sources */,
 				3D3D0AC5218250F500CDD157 /* SearchRequestViewController.swift in Sources */,
 				3D3D0B8E218255AC00CDD157 /* SearchResultsViewController.swift in Sources */,

@@ -68,7 +68,7 @@
                                         <connections>
                                             <outlet property="lblAño" destination="DuG-9g-o00" id="cJm-om-FWY"/>
                                             <outlet property="lblNombre" destination="nrB-M1-R6r" id="QfK-Ca-C6E"/>
-                                            <segue destination="c3Z-og-eMo" kind="show" id="koP-jd-ecy"/>
+                                            <segue destination="c3Z-og-eMo" kind="show" identifier="goToDetalle" id="koP-jd-ecy"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -171,10 +171,11 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pW7-hn-CRx">
                                 <rect key="frame" x="135" y="576" width="106" height="71"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="50"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="VOG-cv-rzq"/>
+                                    <outletCollection property="gestureRecognizers" destination="UWL-re-9um" appends="YES" id="ggR-NQ-Mac"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -198,15 +199,21 @@
                         <viewLayoutGuide key="safeArea" id="xzz-If-mKa"/>
                     </view>
                     <connections>
-                        <outlet property="lblAño" destination="QZ9-Ce-TJv" id="HOo-eU-hM2"/>
-                        <outlet property="lblDirector" destination="GDC-cW-lf0" id="TEO-E4-iUa"/>
-                        <outlet property="lblDuracion" destination="PNo-he-7Xw" id="nOh-rt-dz1"/>
-                        <outlet property="lblGenero" destination="fHE-Bz-Mze" id="LJe-Dq-ntE"/>
-                        <outlet property="lblRating" destination="9I8-VT-q7X" id="zfg-v3-dnR"/>
-                        <outlet property="lblTitle" destination="QZ9-Ce-TJv" id="wNu-5M-R5p"/>
+                        <outlet property="lblAño" destination="QZ9-Ce-TJv" id="23Z-2Q-ncl"/>
+                        <outlet property="lblDirector" destination="GDC-cW-lf0" id="Gm2-CR-cIQ"/>
+                        <outlet property="lblDuracion" destination="PNo-he-7Xw" id="Mpl-Aa-lxu"/>
+                        <outlet property="lblGenero" destination="fHE-Bz-Mze" id="CJD-te-2o9"/>
+                        <outlet property="lblRating" destination="9I8-VT-q7X" id="oS9-MM-Cuh"/>
+                        <outlet property="lblTitle" destination="PBd-yE-c8T" id="sTQ-kv-6Yh"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goBack" id="Myf-kI-Iyy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ibs-rZ-QkP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="UWL-re-9um">
+                    <connections>
+                        <action selector="tapBack:" destination="c3Z-og-eMo" id="hkK-1g-y9R"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="936.79999999999995" y="117.39130434782609"/>
         </scene>
