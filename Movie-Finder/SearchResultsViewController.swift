@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Alamofire
+import AlamofireImage
 
 class SearchResultsViewController: UIViewController {
     
@@ -21,6 +22,7 @@ class SearchResultsViewController: UIViewController {
     @IBOutlet weak var lblDuracion: UILabel!
     @IBOutlet weak var lblRating: UILabel!
     @IBOutlet weak var lblGenero: UILabel!
+    @IBOutlet weak var imgPoster: UIImageView!
     
     var movie: DatosSearchRequest?
     
@@ -51,6 +53,12 @@ class SearchResultsViewController: UIViewController {
                     if let movieGenero = diccionarioRespuesta.value(forKey: "Genre") as? String {
                         self.lblGenero.text = movieGenero
                     }
+                    if let moviePosterURL = diccionarioRespuesta.value(forKey: "Poster") as? String {
+                        Alamofire.request(moviePosterURL).responseImage {
+                            response in
+                            self.imgPoster.image = response.result.value
+                        }
+                    }
                 }
             }
         }
@@ -58,7 +66,7 @@ class SearchResultsViewController: UIViewController {
     
     
     @IBAction func tapBack(_ sender: Any) {
-        performSegue(withIdentifier: "goBack", sender: self)
+       self.dismiss(animated: true, completion: nil)
     }
     
     

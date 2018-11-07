@@ -13,7 +13,7 @@ class SearchRequestViewController: UIViewController, UITableViewDataSource, UITa
     
     var urlAPI : String = "https://www.omdbapi.com/?apikey=5aec3ba9&s="
     var movieURL: String = ""
-    
+    var busqueda : String = ""
     
     @IBOutlet weak var txtSearch: UITextField!
     @IBOutlet weak var aiSearch: UIActivityIndicatorView!
@@ -22,7 +22,11 @@ class SearchRequestViewController: UIViewController, UITableViewDataSource, UITa
         
         aiSearch.startAnimating()
         
-        movieURL = "\(urlAPI)" + txtSearch.text!
+        busqueda = txtSearch.text!
+        
+        busqueda = busqueda.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!
+        
+        movieURL = "\(urlAPI)" + "\(busqueda)"
         
         Alamofire.request(movieURL).responseJSON {
             response in
@@ -45,8 +49,8 @@ class SearchRequestViewController: UIViewController, UITableViewDataSource, UITa
                             
                             DatosMovie.moviesSearch.append(movie)
                             
-                            self.aiSearch.stopAnimating()
                             self.tbMovies.reloadData()
+                            self.aiSearch.stopAnimating()
                         }
                     }
                     

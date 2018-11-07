@@ -30,9 +30,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="Search:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Ly9-De-61v"/>
-                                </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HMo-r3-myc">
                                 <rect key="frame" x="0.0" y="155" width="359" height="512"/>
@@ -178,12 +175,17 @@
                                     <outletCollection property="gestureRecognizers" destination="UWL-re-9um" appends="YES" id="ggR-NQ-Mac"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Af-37-a9G">
+                                <rect key="frame" x="17" y="230" width="343" height="338"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fHE-Bz-Mze" firstAttribute="top" secondItem="9I8-VT-q7X" secondAttribute="bottom" constant="8" id="2k2-qz-9ye"/>
+                            <constraint firstAttribute="bottom" secondItem="4Af-37-a9G" secondAttribute="bottom" constant="99" id="329-En-2hF"/>
                             <constraint firstItem="PBd-yE-c8T" firstAttribute="centerX" secondItem="KjY-cY-mXc" secondAttribute="centerX" id="7J0-yq-mJS"/>
                             <constraint firstItem="xzz-If-mKa" firstAttribute="bottom" secondItem="pW7-hn-CRx" secondAttribute="bottom" constant="20" id="894-a7-9gY"/>
+                            <constraint firstItem="4Af-37-a9G" firstAttribute="top" secondItem="fHE-Bz-Mze" secondAttribute="bottom" constant="8" id="AKI-ff-JkD"/>
                             <constraint firstItem="PNo-he-7Xw" firstAttribute="top" secondItem="GDC-cW-lf0" secondAttribute="bottom" constant="8" id="BPc-wE-y1y"/>
                             <constraint firstItem="pW7-hn-CRx" firstAttribute="centerX" secondItem="KjY-cY-mXc" secondAttribute="centerX" id="DaY-rk-ejQ"/>
                             <constraint firstItem="9I8-VT-q7X" firstAttribute="leading" secondItem="xzz-If-mKa" secondAttribute="leading" constant="16" id="Flu-cQ-L7Z"/>
@@ -192,20 +194,22 @@
                             <constraint firstItem="fHE-Bz-Mze" firstAttribute="leading" secondItem="xzz-If-mKa" secondAttribute="leading" constant="16" id="OqT-uM-AdM"/>
                             <constraint firstItem="9I8-VT-q7X" firstAttribute="top" secondItem="PNo-he-7Xw" secondAttribute="bottom" constant="8" id="PyN-BZ-53H"/>
                             <constraint firstItem="QZ9-Ce-TJv" firstAttribute="leading" secondItem="xzz-If-mKa" secondAttribute="leading" constant="16" id="S3H-Va-YTu"/>
+                            <constraint firstItem="4Af-37-a9G" firstAttribute="leading" secondItem="xzz-If-mKa" secondAttribute="leading" constant="17" id="Zg1-u3-5Uc"/>
                             <constraint firstItem="GDC-cW-lf0" firstAttribute="top" secondItem="QZ9-Ce-TJv" secondAttribute="bottom" constant="8" id="aaT-ma-kc7"/>
                             <constraint firstItem="PNo-he-7Xw" firstAttribute="leading" secondItem="xzz-If-mKa" secondAttribute="leading" constant="16" id="hsu-3L-f6N"/>
                             <constraint firstItem="GDC-cW-lf0" firstAttribute="leading" secondItem="xzz-If-mKa" secondAttribute="leading" constant="16" id="mG0-C7-bY4"/>
+                            <constraint firstItem="xzz-If-mKa" firstAttribute="trailing" secondItem="4Af-37-a9G" secondAttribute="trailing" constant="15" id="tqK-ZK-9Ir"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xzz-If-mKa"/>
                     </view>
                     <connections>
+                        <outlet property="imgPoster" destination="4Af-37-a9G" id="WDO-Pn-4Mj"/>
                         <outlet property="lblAño" destination="QZ9-Ce-TJv" id="23Z-2Q-ncl"/>
                         <outlet property="lblDirector" destination="GDC-cW-lf0" id="Gm2-CR-cIQ"/>
                         <outlet property="lblDuracion" destination="PNo-he-7Xw" id="Mpl-Aa-lxu"/>
                         <outlet property="lblGenero" destination="fHE-Bz-Mze" id="CJD-te-2o9"/>
                         <outlet property="lblRating" destination="9I8-VT-q7X" id="oS9-MM-Cuh"/>
                         <outlet property="lblTitle" destination="PBd-yE-c8T" id="sTQ-kv-6Yh"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="goBack" id="Myf-kI-Iyy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ibs-rZ-QkP" userLabel="First Responder" sceneMemberID="firstResponder"/>
